@@ -1,0 +1,1 @@
+nohup node launch git_auto_deploy_innox_website >> ~/auto_deploy.out 2>&1 &

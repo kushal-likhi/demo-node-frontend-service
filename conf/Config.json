@@ -1,0 +1,44 @@
+/**
+ * This file contains the user / implementation / Business logic level config.
+ *
+ * If you want any JS to execute while preparing this conf supply the props in <?JS= :JS>
+ * */
+{
+    /**
+     * Common configurations.
+     * These will be loaded common for each environment.
+     * You can override these in environment specific blocks.
+     * */
+    "common": {
+        //Settings for encrypt / decrypt functions in UTILS
+        "crypto": {
+            "generatorSecret": "sdfdsfsdljfslddfsdfSDFSDfsDfsdfsDfsfSDf34t#%^5eerFGdFgFDg$%GDfGdfgDFgDger%TERgseGE4gRegt45t564564tgsdgdgsdgsgger5tergsrgsdgerhdhdfgs433",
+            "generatorAlgorithm": "aes-192-cbc"
+        }
+    },
+    /**
+     * For Dev environment
+     * */
+    "development": {
+    },
+    /**
+     * For staging environment
+     * */
+    "staging": {
+    },
+    /**
+     * For Prod environment
+     * */
+    "production": {
+    },
+    /**
+     * For Test environment
+     * */
+    "test": {
+    },
+    /**
+     * For QA environment
+     * */
+    "qa": {
+    }
+}

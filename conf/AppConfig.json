@@ -1,0 +1,125 @@
+/**
+ * This file contains the application level config.
+ *
+ * For implementation / Business logic config use the filr 'Config.json'
+ *
+ * If you want any JS to execute while preparing this conf supply the props in <?JS= :JS>
+ * */
+{
+    /**
+     * Common configurations.
+     * These will be loaded common for each environment.
+     * You can override these in environment specific blocks.
+     * */
+    "common": {
+        //Default port number. Reads environment variable
+        "port": "<?JS= process.env.NODE_PORT || 8080 :JS>",
+        //Version of the app
+        "appVersion": "1.0.0 - basecamp",
+        //App Name
+        "appName": "Demo Frontend Node Service",
+        //HAPI Config
+        "hapi": {
+            //CORS Settings
+            "cors": {
+                "origin": ["*"],
+                "additionalHeaders": ["x-tenant"]
+            }
+        },
+        //auth cookie settings
+        "auth": {
+            "cookiePassword": "jsdhfiehlfh9734fgwehfg348fgywegfhgdlauheourq2y738r47853854237grksgfagfkasjgfi8237trfqwfgashf",
+            "sessionCookieName": "_dnorcpssk",
+            "httpsEnabled": false
+        },
+        //Database config
+        "dataSource": {
+            "mongo": {
+                "url": "mongodb://localhost:27017/news-on-run-cps",
+                "poolSize": "100",
+                "ignoreConnectionError": true
+            },
+            "neo4j": {
+                "url": "http://localhost:7474",
+                "ignoreConnectionError": true
+            },
+            "mysql": {
+                "ignoreConnectionError": true,
+                "host": "",
+                "user": "",
+                "password": "",
+                "port": 3306,
+                "database": "",
+                "logQueries": true,
+                "pool": {
+                    "maxConnections": 100
+                }
+            },
+            "redis": {
+                "ignoreConnectionError": true,
+                "url": "localhost",
+                "port": 6379
+            }
+        },
+        //Configuration for logger
+        "logger": {
+            //Define log output format
+            "fullFormat": "[%level][%name-%pid][%file:%line][%time] - %message",
+            "minimalFormat": "[%name-%pid][%file:%line] - %message",
+            //The minimum log level to use
+            "level": "trace",
+            //This name will be displayed on logs as app name
+            "appNameToDisplayInLog": "DEMO-NODE",
+            //Show hidden props in logged objects
+            "showHidden": true,
+            //Stdout appender config for logger
+            "stdout": {
+                "enabled": true
+            }
+        }
+    },
+
+
+    /**
+     * For Dev environment
+     * */
+    "development": {
+        "port": "<?JS= process.env.NODE_PORT || 8080 :JS>",
+        "serverUrl": "//localhost:<?JS= process.env.NODE_PORT || 8080 :JS>"
+    },
+
+    /**
+     * For staging environment
+     * */
+    "staging": {
+        "port": "<?JS= process.env.NODE_PORT || 8080 :JS>",
+        "serverUrl": "//52.64.78.76:8080"
+    },
+
+    /**
+     * For Prod environment
+     * */
+    "production": {
+        "port": "<?JS= process.env.NODE_PORT || 8080 :JS>",
+        "serverUrl": "//52.25.155.157:8080",
+        "auth": {
+            "cookiePassword": "djlcjskdhf9723yfiugwqdfqwtfdytwrdywetuyfgrekhgtijtypju76985y54t74tr6fddsfewfwr4657hgdg34wefdsfwwedsdfewf55t"
+        }
+    },
+
+    /**
+     * For Test environment
+     * */
+    "test": {
+        "port": "<?JS= process.env.NODE_PORT || 8080 :JS>",
+        "serverUrl": "//localhost:<?JS= process.env.NODE_PORT || 8080 :JS>"
+    },
+
+    /**
+     * For Staging/QA environment
+     * */
+    "qa": {
+        "port": "<?JS= process.env.NODE_PORT || 8080 :JS>",
+        "serverUrl": "//qa......"
+    }
+}

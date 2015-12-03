@@ -1,0 +1,4 @@
+
+cd
+
+./deploy.sh
