@@ -3,7 +3,7 @@
 ###########################
 .idea/
 *ipr
-*.iml
+.idea/demo-node-frontend-service.iml
 
 
 ###########################
