@@ -142,6 +142,7 @@ tasks.push(function (callback) {
 
 //Load Cluster worker population
 tasks.push(function (callback) {
+    return callback(); //Disabled as running without DB
     setInterval((function (fn) {
         fn();
         callback();

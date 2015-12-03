@@ -4,8 +4,7 @@
  * This file contains the common util methods
  * */
 
-var crypto = require('crypto'),
-    ObjectId = require("mongoose").Types.ObjectId;
+var crypto = require('crypto');
 
 /**
  * Convert To ObjectId
@@ -16,7 +15,7 @@ var crypto = require('crypto'),
  * @return {ObjectId} the objectId instance
  *
  * */
-exports.convertToObjectId = function (id) {
+/*exports.convertToObjectId = function (id) {
     var objectId = null;
     if (id instanceof ObjectId) {
         objectId = id;
@@ -28,7 +27,7 @@ exports.convertToObjectId = function (id) {
         }
     }
     return objectId;
-};
+};*/
 
 /**
  * Used to generate a random key of desired bytes.
