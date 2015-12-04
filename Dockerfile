@@ -29,13 +29,13 @@ RUN mkdir /opt/consul && mkdir /etc/consul.d/
 ENV PATH $PATH:/opt/consul
 WORKDIR /opt/consul
 
-RUN wget https://dl.bintray.com/mitchellh/consul/${CONSUL_APP_VERSION}_linux_amd64.zip \
-    && wget https://dl.bintray.com/mitchellh/consul/${CONSUL_APP_VERSION}_web_ui.zip \
-    && wget https://github.com/hashicorp/envconsul/releases/download/v${ENVCONSUL_APP_VERSION}/envconsul_${ENVCONSUL_APP_VERSION}_linux_amd64.tar.gz \
-    && unzip ${CONSUL_APP_VERSION}_linux_amd64.zip \
-    && unzip ${CONSUL_APP_VERSION}_web_ui.zip \
-    && tar zxf envconsul_${ENVCONSUL_APP_VERSION}_linux_amd64.tar.gz \
-    && ln -s envconsul_${ENVCONSUL_APP_VERSION}_linux_amd64/envconsul .
+#RUN wget https://dl.bintray.com/mitchellh/consul/${CONSUL_APP_VERSION}_linux_amd64.zip \
+#    && wget https://dl.bintray.com/mitchellh/consul/${CONSUL_APP_VERSION}_web_ui.zip \
+#    && wget https://github.com/hashicorp/envconsul/releases/download/v${ENVCONSUL_APP_VERSION}/envconsul_${ENVCONSUL_APP_VERSION}_linux_amd64.tar.gz \
+#    && unzip ${CONSUL_APP_VERSION}_linux_amd64.zip \
+#    && unzip ${CONSUL_APP_VERSION}_web_ui.zip \
+#    && tar zxf envconsul_${ENVCONSUL_APP_VERSION}_linux_amd64.tar.gz \
+#    && ln -s envconsul_${ENVCONSUL_APP_VERSION}_linux_amd64/envconsul .
 
 # NODE
 #
