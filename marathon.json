@@ -2,7 +2,7 @@
     "id": "/mesosphere/cd-demo-node-app",
     "instances": 2,
     "cpus": 1,
-    "mem": 512,
+    "mem": 496,
     "container": {
         "type": "DOCKER",
         "docker": {
