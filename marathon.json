@@ -30,6 +30,5 @@
         }
     ],
     "constraints": [
-        [ "hostname", "GROUP_BY" ]
     ]
 }
